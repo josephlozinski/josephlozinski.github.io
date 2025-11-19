@@ -1,0 +1,89 @@
+/*i love fonts, so im going to import some google fonts! */
+/* then ill have my font classes here*/
+
+/* p: inconsolata */
+
+body {
+    margin: 0; 
+    font-family: "Inconsolata", monospace;
+    /* background-color: #2660A4; *//* changed the background colour for better contrast */
+    background-color: #3C6844;
+    color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Spectral", serif; 
+    font-weight: 600; 
+}
+
+/* nav bar styling */
+/* styling for my name on sidebar */
+.nav-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 0px;
+    /*background-color: #1B1B1E;*/
+    background-color: #06546B;
+    text-align: left;
+    padding-top: 50px;
+}
+
+.nav-title {
+    transform: scale(1.05); 
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header .nav-title:hover {
+    text-shadow: 0 0 0.4px rgb(206, 188, 255), 0 0 0.7px rgb(255, 255, 255); 
+    transform: scale(1.05); 
+    background-color: transparent; /* so the container doesnt show like the rest of the nav bar */
+}
+
+nav, .sidebar {
+    font-family: "Karla", sans-serif;
+}
+
+.sidebar {
+    font-family: "Karla", sans-serif;
+    font-weight: 300;
+    height: 100%; 
+    width: 175px; /* changed this so its a little smaller */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    background-color: #054B61; 
+    overflow-x: hidden;
+    padding-top: 155px;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar a {
+    font-family: inherit;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+   background-color: #08799B;
+}
+
+/* main content area */
+#main {
+    margin-left: 180px;
+    padding: 20px;
+    max-width: calc(100% - 175px); /* in order to stop content from going under sidebar */
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
