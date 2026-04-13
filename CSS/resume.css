@@ -1,0 +1,110 @@
+body {
+margin: 0;
+padding: 0;
+font-family: monospace;
+font-weight: bold;
+text-align: center;
+background-color:#003566;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #000814;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: #ffd60a;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-family: monospace;
+font-weight: bolder;
+}
+
+ul li a:hover {
+background-color: #000205;
+}
+
+header {
+padding: 24px 0 16px;
+font-size: 2em;
+font-family: monospace;
+font-weight: bolder;
+color: #ffd60a;
+}
+
+main {
+padding: 24px 16px 48px;
+}
+
+table {
+width: 90%;
+max-width: 900px;
+margin: 0 auto;
+border-collapse: collapse;
+text-align: left;
+border: #ffd60a;
+border-style: groove;
+border-width: 5px
+}
+
+th {
+background-color: #ffc300;
+color: #000814;
+padding: 12px 16px;
+}
+
+td {
+padding: 12px 16px;
+vertical-align: top;
+border-bottom: 1px solid #ffd60a;
+color: #ffd60a;
+
+}
+
+tr:last-child td {
+border-bottom: none;
+}
+
+tr:nth-child(even) {
+background-color: #000814;
+}
+
+tr:nth-child(odd) {
+background-color: #001d3d;
+}
+
+tbody ul {
+list-style-type: disc;
+background-color: transparent;
+padding-left: 20px;
+overflow: visible;
+color: #ffd60a;
+}
+
+tbody ul li {
+float: none;
+text-align: left;
+line-height: 1.6;
+color: #ffd60a;
+}
+
+footer{
+margin: 0;
+padding: 0;
+font-family: monospace;
+font-weight: bold;
+text-align: center;
+background-color: #000814;
+height: 50px;
+color: #ffd60a;
+line-height: 50px;
+}
