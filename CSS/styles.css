@@ -122,3 +122,42 @@ height: 50px;
 color: #ffd60a;
 line-height: 50px;
 }
+
+@media (max-width: 768px) {
+
+    .container {
+        display: block;
+    }
+
+    .grid-item, .grid-item-other {
+        grid-column: 1 / -1 !important;
+        display: block !important;
+        width: 100% !important;
+        padding: 12px !important;
+    }
+
+    .grid-item video,
+    .grid-item iframe,
+    .grid-item-other video,
+    .grid-item-other iframe {
+        width: 100% !important;
+        height: 250px;
+    }
+
+    .grid-item img,
+    .grid-item-other img {
+        width: 100% !important;
+    }
+
+    .grid-item div,
+    .grid-item-other div {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    h2 {
+        text-align: left !important;
+        font-size: large !important;
+    }
+}
