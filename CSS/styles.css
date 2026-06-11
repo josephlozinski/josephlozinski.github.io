@@ -1,34 +1,94 @@
+:root {
+    --color-bg:      #003566;
+    --color-dark:    #000814;
+    --color-mid:     #001d3d;
+    --color-accent:  #ffd60a;
+    --color-accent2: #ffc300;
+    --font-mono:     monospace;
+    --border:        5px groove var(--color-accent);
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-weight: bold;
     text-align: center;
-    background-color: #003566;
+    background-color: var(--color-bg);
 }
 
-/* Navbar */
+header {
+    padding: 24px 0 16px;
+    font-size: 2em;
+    font-family: var(--font-mono);
+    font-weight: bolder;
+    color: var(--color-accent);
+}
+
+main {
+    padding: 24px 16px 48px;
+}
+
+p {
+    margin: 0 auto 25px;
+    max-width: 800px;
+    line-height: 1.5;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--color-accent);
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-weight: bolder;
+    text-align: center;
+    color: var(--color-accent);
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--color-dark);
+    height: 50px;
+    color: var(--color-accent);
+    line-height: 50px;
+}
+
 .navbar {
     overflow: hidden;
-    background-color: #000814;
+    background-color: var(--color-dark);
 }
 
 .navbar a {
     float: left;
     display: block;
-    color: #ffd60a;
+    color: var(--color-accent);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-weight: bolder;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
     background-color: #000205;
 }
 
-/* Dropdown */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -39,9 +99,9 @@ body {
     font-size: 1em;
     border: none;
     outline: none;
-    color: #ffd60a;
+    color: var(--color-accent);
     background-color: inherit;
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-weight: bolder;
     padding: 14px 16px;
 }
@@ -49,19 +109,19 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #000814;
+    background-color: var(--color-dark);
     min-width: 160px;
     z-index: 1;
 }
 
 .dropdown-content a {
     float: none;
-    color: #ffd60a;
+    color: var(--color-accent);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-    font-family: monospace;
+    font-family: var(--font-mono);
     font-weight: bold;
 }
 
@@ -73,68 +133,14 @@ body {
     display: block;
 }
 
-header {
-    padding: 24px 0 16px;
-    font-size: 2em;
-    font-family: monospace;
-    font-weight: bolder;
-    color: #ffd60a;
-}
-
-main {
-    padding: 24px 16px 48px;
-}
-
-p {
-    margin: 0 auto 25px;
-    max-width: 800px;
-    line-height: 1.5;
-    font-family: monospace;
-    font-weight: bold;
-    color: #ffd60a;
-}
-
-h2 {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    font-weight: bolder;
-    text-align: center;
-    color: #ffd60a;
-}
-
-h3 {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    font-weight: bolder;
-    text-align: center;
-    color: #ffd60a;
-}
-
-footer {
-    margin: 0;
-    padding: 0;
-    font-family: monospace;
-    font-weight: bold;
-    text-align: center;
-    background-color: #000814;
-    height: 50px;
-    color: #ffd60a;
-    line-height: 50px;
-}
-
-/* ── Mobile ──────────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
-    /* portfolio.css grid collapses to a single flex column */
     .container {
         display: flex;
         flex-direction: column;
         padding: 8px;
     }
 
-    /* grid items stack vertically and lose their column placement */
     .grid-item,
     .grid-item-other {
         grid-column: 1 / -1 !important;
@@ -144,27 +150,34 @@ footer {
         min-height: unset !important;
     }
 
-    /* portfolio1 flex rows also stack on mobile */
     .grid-item:nth-child(even) {
         flex-direction: column !important;
+    }
+
+    .portfolio-item {
+        flex-direction: column !important;
+        min-height: unset !important;
     }
 
     .grid-item video,
     .grid-item iframe,
     .grid-item-other video,
-    .grid-item-other iframe {
+    .grid-item-other iframe,
+    .portfolio-item video,
+    .portfolio-item iframe {
         width: 100% !important;
         height: 220px;
     }
 
     .grid-item img,
-    .grid-item-other img {
+    .grid-item-other img,
+    .portfolio-item img {
         width: 100% !important;
     }
 
-    /* text divs inside items go full width */
     .grid-item > div,
-    .grid-item-other > div {
+    .grid-item-other > div,
+    .portfolio-item > div {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
