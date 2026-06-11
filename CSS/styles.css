@@ -1,11 +1,12 @@
 body {
-margin: 0;
-padding: 0;
-font-family: monospace;
-font-weight: bold;
-text-align: center;
-background-color:#003566;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    background-color: #003566;
 }
+
 /* Navbar */
 .navbar {
     overflow: hidden;
@@ -73,67 +74,79 @@ background-color:#003566;
 }
 
 header {
-padding: 24px 0 16px;
-font-size: 2em;
-font-family: monospace;
-font-weight: bolder;
-color: #ffd60a;
+    padding: 24px 0 16px;
+    font-size: 2em;
+    font-family: monospace;
+    font-weight: bolder;
+    color: #ffd60a;
 }
 
 main {
-padding: 24px 16px 48px;
+    padding: 24px 16px 48px;
 }
 
 p {
-margin: 0 auto 25px;
-max-width: 800px;
-line-height: 1.5;
-font-family: monospace;
-font-weight: bold;
-color: #ffd60a;
+    margin: 0 auto 25px;
+    max-width: 800px;
+    line-height: 1.5;
+    font-family: monospace;
+    font-weight: bold;
+    color: #ffd60a;
 }
 
-h2{
-margin: 0;
-padding: 0;
-font-family: monospace;
-font-weight: bolder;
-text-align: center;
-color: #ffd60a;
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    color: #ffd60a;
 }
 
-h3{
-margin: 0;
-padding: 0;
-font-family: monospace;
-font-weight: bolder;
-text-align: center;
-color: #ffd60a;
+h3 {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-weight: bolder;
+    text-align: center;
+    color: #ffd60a;
 }
 
-footer{
-margin: 0;
-padding: 0;
-font-family: monospace;
-font-weight: bold;
-text-align: center;
-background-color: #000814;
-height: 50px;
-color: #ffd60a;
-line-height: 50px;
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    font-weight: bold;
+    text-align: center;
+    background-color: #000814;
+    height: 50px;
+    color: #ffd60a;
+    line-height: 50px;
 }
 
+/* ── Mobile ──────────────────────────────────────────────────── */
 @media (max-width: 768px) {
 
+    /* portfolio.css grid collapses to a single flex column */
     .container {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
     }
 
-    .grid-item, .grid-item-other {
+    /* grid items stack vertically and lose their column placement */
+    .grid-item,
+    .grid-item-other {
         grid-column: 1 / -1 !important;
-        display: block !important;
+        flex-direction: column !important;
         width: 100% !important;
         padding: 12px !important;
+        min-height: unset !important;
+    }
+
+    /* portfolio1 flex rows also stack on mobile */
+    .grid-item:nth-child(even) {
+        flex-direction: column !important;
     }
 
     .grid-item video,
@@ -141,7 +154,7 @@ line-height: 50px;
     .grid-item-other video,
     .grid-item-other iframe {
         width: 100% !important;
-        height: 250px;
+        height: 220px;
     }
 
     .grid-item img,
@@ -149,8 +162,9 @@ line-height: 50px;
         width: 100% !important;
     }
 
-    .grid-item div,
-    .grid-item-other div {
+    /* text divs inside items go full width */
+    .grid-item > div,
+    .grid-item-other > div {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
