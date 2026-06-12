@@ -133,6 +133,10 @@ footer {
     display: block;
 }
 
+.hamburger {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     .container {
@@ -186,5 +190,32 @@ footer {
     h2 {
         text-align: left !important;
         font-size: large !important;
+    }
+
+    hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    font-size: 1.8em;
+    padding: 14px 16px;
+    cursor: pointer;
+    }
+    
+    .navbar a,
+    .navbar .dropdown {
+        display: none;
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .navbar.open a,
+    .navbar.open .dropdown {
+        display: block;
+    }
+    
+    .navbar.open .dropdown-content {
+        position: static;
     }
 }
