@@ -1,182 +1,309 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="CSS/portfolio.css">
-        <link rel="stylesheet" href="CSS/styles.css">
-        <title>CFRE</title>
 
-    </head>
-    <body>
-        <div class="navbar">
-            <button class="hamburger" onclick="this.parentElement.classList.toggle('open')">☰</button>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <div class="dropdown">
-                <button class="dropbtn">Portfolio
-                </button>
-                <div class="dropdown-content">
-                    <a href="portfolio_CFRE.html">CFRE</a>
-                    <a href="portfolio_pth.html">playingthehorn</a>
-                    <a href="portfolio_other.html">Other Works</a>
-                </div>
-            </div>
-            <a href="contact_info.html">Contact Information</a>
-        </div>
+<head>
+    <link rel="stylesheet" href="CSS/portfolio.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>CFRE</title>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <button class="hamburger" onclick="this.parentElement.classList.toggle('open')">☰</button>
+        <a href="index.html">Home</a>
+        <a href="portfolio_CFRE.html">CFRE</a>
+        <a href="portfolio_pth.html">PlayingTheHorn</a>
+        <a href="portfolio_other.html">Other Works</a>
+        <a href="contact_info.html">Contact</a>
+    </div>
 
 
-       <header>Portfolio - CFRE</header>
 
-        <div class="container">
+    <div class="portfolio-grid">
 
-            <div class="grid-item" style="grid-column: col-start 15 / span 6; grid-row: 1 / span 6;">
+
+        <div class="portfolio-card portfolio-card--split portfolio-card--stu">
+            <div class="card-media card-media--vertical">
                 <div class="carousel-wrap">
-                    <video id="carousel-video" width="100%" controls>
-                        <source src="images/cfre/street2.mp4" type="video/mp4">
-                    </video>
+                    <iframe id="carousel-tiktok" src="https://www.tiktok.com/embed/v2/7629513323268033800"
+                        frameborder="0" scrolling="no"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen>
+                    </iframe>
                     <p class="caption" id="cap">Stu's Studio (so far)</p>
+
                     <div class="controls">
                         <button class="arrow" onclick="move(-1)">&#8592;</button>
                         <div class="dots" id="dots"></div>
                         <button class="arrow" onclick="move(1)">&#8594;</button>
                     </div>
+                    <span class="carousel-counter" id="counter"></span>
+
                 </div>
             </div>
+            <div class="card-body">
+                <img src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/stu.png"
+                    alt="Stu On The Street Logo" class="card-logo">
 
-           <div class="grid-item-other" style="grid-column: col-start 3 / span 11; grid-row: 2 / span 6;">
-                <img src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/stu.png" alt="Stu On The Street Logo" width="80%">
-                <p class="desc">
-                    Stu On The Street is an interactive content series designed, written and edited by myself. 
-                    Considering CFRE is the resident University of Toronto campus radio station, our team aimed 
-                    to produce content interacting with the student body. My strategy was to introduce a series 
-                    where students could see their friends and themselves featured, in turn promoting shares, 
-                    likes and reposts. The content has gradually evolved from its first iteration, increasing 
-                    production value and thematic representation of the studio's mascot, Stu. Attached are the 
-                    four episodes thus far, progressing from the most recent to the very first episode.
-                </p>
+                <p style="text-indent: 2em; text-align: justify; padding: 2em;"> Stu On The Street is an interactive
+                    content series designed, written and edited by
+                    myself. Considering CFRE is the resident University of Toronto campus radio station, our team aimed
+                    to produce content interacting with the student body. My strategy was to introduce a series
+                    where students could see their friends and themselves featured, in turn promoting shares,
+                    likes and reposts. The content has gradually evolved from its first iteration, increasing
+                    production value and thematic representation of the studio's mascot, Stu. Attached are the
+                    four episodes thus far, progressing from the most recent to the very first episode.</p>
+                <span class="card-type-badge">Video Series</span>
             </div>
-
-            <div class="grid-item" style="grid-column: col-start 4 / span 10; grid-row: 7 / span 4;">
-                <video width="40%" controls style="flex-shrink: 0; align-self: flex-start;">
-                    <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/oscar.mp4" type="video/mp4">
-                </video>
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 60%;">
-                    <h2 style="text-align: left;">Black History Month Showcase - Oscar Peterson</h2>
-                    <p style="text-align: left; margin-top: 5%;">Video biography of the late great Oscar Peterson for black history month coverage.</p>
-                    <span class="credit" style="color: #ffd60a;">Designed in Canva</span>
-                </div>
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 12 / span 10; grid-row: 9 / span 4;">
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 60%;">
-                    <h2 style="text-align: right;">The History of the Blues: Educational Genre Showcase</h2>
-                    <p style="text-align: right; margin-top: 5%;">Educational video about the blues genre as a promoting content for our blues show at CFRE.</p>
-                    <span class="credit2" style="color: #ffd60a;">Designed in Canva</span>
-                </div>
-                <video id="images" width="40%" controls>
-                    <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/blues.mp4" type="video/mp4">
-                </video>
-                
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 3 / span 9; grid-row: 12 / span 3;">
-                <img src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/menu.png" alt="menu" width="50%">
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 60%;">
-                    <h2 style="text-align: left;">Weekly Show Menu Post</h2>
-                    <p style="text-align: left; margin-top: 5%;">Creative interpretation for presenting show schedule for the week in a "menu" format</p>
-                    <span class="credit" style="color: #ffd60a;">Designed in Canva</span>
-                </div>
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 12 / span 9; grid-row: 14 / span 3;">
-                
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 60%;">
-                    <h2 style="text-align: right;">What's Your Favourite Love Song?</h2>
-                    <p style="text-align: right; margin-top: 5%;">Engagement producer in honour of valentines weekend featuring a story sticker to respond with favourite songs to station accounts.</p>
-                    <span class="credit2" style="color: #ffd60a;">Designed in Canva</span>
-                </div>
-                <img src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/valentine.png" alt="menu" width="50%">
-            </div>
-
-            <div class="grid-item-other" style="grid-column: col-start 1 / span 24; grid-row: 17 / span 1;">
-                <h1 style="color: #ffd60a; text-align: center; padding-top: 3%;">Interviews</h1>
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 3 / span 19; grid-row: 18 / span 5; display: flex; align-items: stretch; gap: 20px; padding: 16px;">
-                <iframe width="70%" src="https://www.youtube.com/embed/7G-UAO3WhnY?si=CcBVUVGojDYlZqR7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="flex-shrink: 0;"></iframe>
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; width: 50%;">
-                    <h2 style="text-align: left; color: #ffd60a;">Lex Leosis Interview: Full Video</h2>
-                    <p  style="text-align: left; margin-top: 5%;">My first artist interview with CFRE feature Lex Leosis, a Toronto based artist, prior to the release of her album 'don't get hurt.' I personally prepared questions for Lex
-                        regarding her stylistic choices, narratives pursued, and career progression within the space, on route to a candid and awesome conversation.
-                    </p>
-                     <span class="credit" style="color: #ffd60a;">Designed in Premiere Pro</span>
-                </div>
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 1 / span 8; grid-row: 24 / span 4; padding: 24px 32px 0 48px;">
-                <video width="55%" controls style="flex-shrink: 0; align-self: flex-start;">
-                    <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex1.mp4" type="video/mp4">
-                </video>
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 45%;">
-                    <h2 style="text-align: left;">Clip One: Album Themes</h2>
-                    <span class="credit" style="color: #ffd60a; padding-top: 10%; padding-bottom: 5%;">Designed in Canva</span>
-                </div>
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 9 / span 8; grid-row: 24 / span 4; padding: 24px 32px 0 32px;">
-                <video width="55%" controls style="flex-shrink: 0; align-self: flex-start;">
-                    <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex2.mp4" type="video/mp4">
-                </video>
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 45%;">
-                    <h2 style="text-align: left;">Clip Two: Collaboration</h2>
-                    <span class="credit" style="color: #ffd60a; padding-top: 10%; padding-bottom: 5%;">Designed in Canva</span>
-                </div>
-            </div>
-
-            <div class="grid-item" style="grid-column: col-start 17 / span 8; grid-row: 24 / span 4; padding: 24px 48px 0 32px;">
-                <video width="55%" controls style="flex-shrink: 0; align-self: flex-start;">
-                    <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex3.mp4" type="video/mp4">
-                </video>
-                <div style="display: flex; flex-direction: column; justify-content: flex-end; height: 100%; max-width: 45%;">
-                    <h2 style="text-align: left;">Clip Three: Arrangement</h2>
-                    <span class="credit" style="color: #ffd60a; padding-top: 10%; padding-bottom: 5%;">Designed in Canva</span>
-                </div>
-            </div>
-
-
         </div>
-        
-        <footer>
-            All work depicted, linked, and present on this page is property of Joseph Lozinski, or has been produced by him (2026). 
-        </footer>
 
-        <script>
-            const videos = [
-            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/WHATS+YOUR+STUDY+MUSIC+(1).mp4", caption: "what's your go-to study music?" },
-            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/street2.mp4", caption: "top 5 most streamed artists on spotify" },
-            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/street3.mp4", caption: "head to head drake song battle" },
-            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/street4.mp4", caption: "music trivia challenge" },
-            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/street5.mp4", caption: "real or fake lyric" },
-            ];
-            let cur = 0;
-            const vid = document.getElementById('carousel-video');
-            const cap = document.getElementById('cap');
-            const dotsEl = document.getElementById('dots');
 
-            videos.forEach((_, i) => {
+        <div class="portfolio-shared-row">
+            <div class="portfolio-card portfolio-card--shared">
+                <div class="card-media card-media--vertical">
+                    <img src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/menu.png"
+                        alt="Weekly show menu graphic" width="100%">
+                </div>
+                <div class="card-body">
+                    <h4>Weekly Show Menu Post</h4>
+                    <p>Creative interpretation for presenting the week's show schedule in a "menu" format.</p>
+                    <span class="card-type-badge">Canva</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card portfolio-card--shared">
+                <div class="card-media card-media--vertical">
+                    <video width="100%" controls>
+                        <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/oscar.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-body">
+                    <h4>Black History Month Showcase &mdash; Oscar Peterson</h4>
+                    <p>Video biography of the late great Oscar Peterson for Black History Month coverage.</p>
+                    <span class="card-type-badge">Canva</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card portfolio-card--shared">
+                <div class="card-media card-media--vertical">
+                    <img src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/valentine.png"
+                        alt="Valentine's engagement graphic" width="100%">
+                </div>
+                <div class="card-body">
+                    <h4>What's Your Favourite Love Song?</h4>
+                    <p>Engagement post in honour of Valentine's weekend, featuring a story sticker for followers to
+                        respond with their favourite songs.</p>
+                    <span class="card-type-badge">Canva</span>
+                </div>
+            </div>
+            <div class="portfolio-card portfolio-card--shared">
+                <div class="card-media card-media--vertical">
+                    <video controls>
+                        <source src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/blues.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="card-body card-body">
+                    <h4>The History of the Blues: Educational Genre Showcase</h4>
+                    <p>Educational video about the blues genre, produced to promote the blues show at CFRE.</p>
+                    <span class="card-type-badge">Educational</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Section heading -->
+        <div class="portfolio-section-heading">
+            <h1>Interviews</h1>
+        </div>
+
+        <div class="lex-row">
+            <div class="portfolio-card portfolio-card--lex lex-main">
+                <div class="card-media card-media--horizontal">
+                    <iframe src="https://www.youtube.com/embed/7G-UAO3WhnY?si=CcBVUVGojDYlZqR7" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="card-body">
+                    <h2>Lex Leosis Interview: Full Video</h2>
+                    <p>My first artist interview with CFRE, featuring Lex Leosis, a Toronto based artist, ahead of the
+                        release of her album "don't get hurt." I personally prepared questions for Lex regarding her
+                        stylistic choices, narratives pursued, and career progression within the space, on route to a
+                        candid and awesome conversation.</p>
+                    <span class="card-type-badge">Premiere Pro</span>
+                </div>
+            </div>
+
+            <div class="portfolio-card lex-clips">
+                <div class="card-media card-media--vertical">
+                    <div class="carousel-wrap" id="lex-carousel-wrap">
+                        <video id="lex-clip-video" controls>
+                            <source id="lex-clip-source"
+                                src="https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex1.mp4"
+                                type="video/mp4">
+                        </video>
+                        <p class="caption" id="lex-cap">Clip One: Album Themes</p>
+                        <div class="controls">
+                            <button class="arrow" onclick="moveLex(-1)">&#8592;</button>
+                            <div class="dots" id="lex-dots"></div>
+                            <button class="arrow" onclick="moveLex(1)">&#8594;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <footer>
+        <span>&#9632; Contact Information</span>
+        <span>All work &copy; Joseph Lozinski 2026</span>
+    </footer>
+
+    <script>
+
+        const lexClips = [
+            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex1.mp4", caption: "Clip One: Album Themes" },
+            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex2.mp4", caption: "Clip Two: Collaboration" },
+            { src: "https://jozinski-portfolio.s3.us-east-2.amazonaws.com/images/cfre/lex3.mp4", caption: "Clip Three: Arrangement" }
+        ];
+
+        let lexCur = 0;
+        const lexVideo = document.getElementById('lex-clip-video');
+        const lexSource = document.getElementById('lex-clip-source');
+        const lexCap = document.getElementById('lex-cap');
+        const lexDotsEl = document.getElementById('lex-dots');
+
+        lexClips.forEach((_, i) => {
             const d = document.createElement('div');
             d.className = 'dot' + (i === 0 ? ' active' : '');
-            d.onclick = () => go(i);
-            dotsEl.appendChild(d);
-            });
+            d.onclick = () => goLex(i);
+            lexDotsEl.appendChild(d);
+        });
 
-            function go(n) {
-            cur = (n + videos.length) % videos.length;
-            vid.src = videos[cur].src;
-            cap.textContent = videos[cur].caption;
-            vid.load();
-            dotsEl.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+        function goLex(n) {
+            lexCur = (n + lexClips.length) % lexClips.length;
+            lexSource.src = lexClips[lexCur].src;
+            lexVideo.load();
+            lexCap.textContent = lexClips[lexCur].caption;
+            lexDotsEl.querySelectorAll('.dot')
+                .forEach((d, i) => d.classList.toggle('active', i === lexCur));
+        }
+
+        function moveLex(dir) {
+            goLex(lexCur + dir);
+        }
+
+        goLex(0);
+
+        const tiktoks = [
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7660738623263755541",
+                caption: "charli xcx song challenge"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7653998720530566420",
+                caption: "world cup edition"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7647772374137441554",
+                caption: "guess that fish"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7644012832215944466",
+                caption: "d-block europe song challenge"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7639949135696743687",
+                caption: "ice man edition"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7635834355998346517",
+                caption: "jurassic park edition"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7632108342172814610",
+                caption: "lil baby 5-second song challenge"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7629513323268033800",
+                caption: "what's your go-to study music?"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7620544108381113620",
+                caption: "top 5 most streamed artists on spotify"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7617604785591667988",
+                caption: "head to head drake song battle"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7615429496866475271",
+                caption: "music trivia challenge"
+            },
+
+            {
+                src: "https://www.tiktok.com/embed/v2/7611382409375878421",
+                caption: "real or fake lyric"
             }
-            function move(dir) { go(cur + dir); }
-        </script>
-    </body>
-</html>
+        ];
+
+        let cur = 0;
+
+        const iframe = document.getElementById('carousel-tiktok');
+
+        const cap = document.getElementById('cap');
+        const dotsEl = document.getElementById('dots');
+        const counterEl = document.getElementById('counter');
+
+
+
+        tiktoks.forEach((_, i) => {
+            const d = document.createElement('div');
+
+            d.className = 'dot' + (i === 0 ? ' active' : '');
+
+            d.onclick = () => go(i);
+
+            dotsEl.appendChild(d);
+        });
+
+
+        function go(n) {
+
+            cur = (n + tiktoks.length) % tiktoks.length;
+
+            iframe.src = tiktoks[cur].src;
+
+            cap.textContent = tiktoks[cur].caption;
+
+            counterEl.textContent = (cur + 1) + " / " + tiktoks.length;
+
+            dotsEl.querySelectorAll('.dot')
+                .forEach((d, i) =>
+                    d.classList.toggle('active', i === cur)
+                );
+        }
+
+
+        function move(dir) {
+            go(cur + dir);
+        }
+
+        go(0);
+
+    </script>

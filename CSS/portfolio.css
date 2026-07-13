@@ -1,82 +1,380 @@
-.desc {
-    font-family: monospace;
-    font-size: 18px;
-    color: #ffd60a;
-    line-height: 1.8;
-    text-indent: 2em;
-    padding: 0;
-    margin: 0;
-}
-
-.credit {
-    text-align: left !important;
-    opacity: 0.6;
-}
-
-.credit2 {
-    text-align: right !important;
-    opacity: 0.6;
-}
-
-.container {
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(24, [col-start] 1fr);
-    grid-auto-rows: minmax(120px, auto); /* was: repeat(29, 100px) — rows now size to content */
-    gap: 10px;
-    width: 100%;
-    padding: 16px;
-    box-sizing: border-box;
-}
-
-.grid-item {
-    padding: 8px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: stretch;
+    grid-template-columns:
+        repeat(auto-fit);
     gap: 20px;
+    margin: 1.5em;
 }
 
-.grid-item-other {
-    padding: 8px;
+/* Base card: a Win95-style raised panel */
+.portfolio-card {
+    background: var(--jl-surface);
+    padding: 1.5em;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--win95-border-light) var(--win95-border-darker) var(--win95-border-darker) var(--win95-border-light);
+    box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 var(--win95-border-dark);
+}
+
+/* Small thumbnail-style card (used for the compact teaser grid) */
+.card-thumb {
+    position: relative;
+    background: var(--jl-navy);
+    color: var(--jl-yellow);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    text-align: center;
+}
+
+.card-thumb .card-type-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
+
+.card-body h4 {
+    margin-top: 0;
+    font-size: clamp(1.1rem, 4vw, 1.4rem);
+}
+
+.card-body p {
+    margin-top: 0;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+}
+
+/* Category / medium label — e.g. "Video Series", "Canva", "Educational" */
+.card-type-badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 2px 6px;
+    font-size: 10px;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--jl-navy);
+    background: var(--jl-yellow);
+}
+
+/* Cards that need the full grid width (big video/iframe features) */
+.portfolio-card--stu {
+    grid-column: 1 / -1;
+    width: min(60%, 900px); 
+    margin: auto;
+    gap: 25px;
+}
+
+.portfolio-card--lex {
+    grid-column: 1 / -1;
+    width: min(70%, 80em); 
+    margin: auto;
+    gap: 25px;
+}
+
+/* Split layout: media on one side, text on the other */
+
+.portfolio-shared-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+}
+.portfolio-card--split {
+    display: grid;
+    grid-template-columns: 20em 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.portfolio-card--split .card-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-card--split .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     box-sizing: border-box;
 }
 
-.img-item img {
-    width: 100%;
+.portfolio-card--split .card-body p {
+    max-width: 90%;
+}
+
+.portfolio-card--shared {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 240px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+    justify-content: space-between;
+
+}
+
+.portfolio-card--shared .card-body {
+    flex-direction: column;
+    min-width: 0;
+}
+
+.card-media {
+    overflow: hidden;
+}
+
+/* Horizontal videos */
+.card-media--horizontal video {
+    max-width: 700px;
     height: auto;
     display: block;
-    border: 5px groove #ffd60a;
+    margin: 0 auto;
 }
 
-.img-item p {
+/* Vertical videos */
+.card-media--vertical video {
+    max-width: 350px;
+    max-height: 700px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Flip media/body order for alternating left/right rhythm */
+.portfolio-card--reverse {
+    flex-direction: row-reverse;
+}
+
+.card-body--right {
+    text-align: right;
+}
+
+.card-media video,
+.card-media img,
+.card-media iframe {
+    width: 100%;
+    max-height: 300px;
+    display: block;
+    object-fit: contain;
+}
+
+.card-media iframe  {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 2px solid var(--win95-border-darker);
+}
+
+.card-logo {
+    width: 80%;
+    margin-bottom: 16px;
+}
+
+.portfolio-section-heading {
+    grid-column: 1 / -1;
     text-align: center;
-    margin-top: 6px;
+    padding-top: 24px;
+}
+
+.portfolio-section-heading h1 {
+    color: var(--jl-yellow);
+    font-family: 'Courier New', monospace;
 }
 
 .carousel-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    width: 20em;
+    height: 45em;
+}
+
+.carousel-wrap .carousel-counter {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--jl-text);
+    white-space: nowrap;
+    padding: 1em;
+}
+
+/* TikTok vertical frame */
+.carousel-wrap iframe {
+    width: 20em;
+    height: 45em;
+    aspect-ratio: auto;
+    max-height: none;
+    border: 2px solid var(--win95-border-darker);
+    display: block;
+}
+
+/* Caption directly under TikTok */
+.carousel-wrap .caption {
+    width: 100%;
+    text-align: center;
+    margin: 12px 0;
+}
+
+/* Controls directly under caption */
+.carousel-wrap .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     width: 100%;
 }
 
-.controls {
+/* Keep arrows compact */
+.carousel-wrap .arrow {
+    cursor: pointer;
+}
+
+.lex-row {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+    margin: 0 auto 2em;
+    width: min(90%, 1400px);
+    grid-column: 1 / -1;
+}
+
+/* Main interview card: video 75% / text 25% */
+.lex-main {
+    flex: 0 0 70%;
+    width: 70%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.lex-main .card-media {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 12px;
+    justify-content: center;
 }
 
-.arrow {
-    background-color: #000814;
-    border: 2px solid #ffd60a;
-    color: #ffd60a;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 6px;
+.lex-main .card-media iframe {
+    width: 100%;
+    border: 2px solid var(--win95-border-darker);
 }
 
-.arrow:hover { background-color: #000205; }
-.dots { display: flex; gap: 8px; }
-.dot { width: 10px; height: 10px; border-radius: 50%; background: #555; cursor: pointer; }
-.dot.active { background: #ffd60a; }
-.caption { color: #ffd60a; text-align: center; font-family: monospace; margin-top: 8px; }
+.lex-main .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.lex-main .card-body h2 {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-top: 0;
+}
+
+.lex-main .card-body p {
+    font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+    line-height: 1.5;
+}
+
+/* Clip carousel card: matches lex-main's height via flex stretch */
+.lex-clips {
+    flex: 0 0 30%;
+    width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lex-clips .card-media {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lex-clips .carousel-wrap {
+    width: 100%;
+    height: auto;
+}
+
+.lex-clips video {
+    width: 100%;
+    max-height: 320px;
+    border: 2px solid var(--win95-border-darker);
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card--reverse {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .portfolio-card--split {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .portfolio-card--split .card-media {
+        max-width: 100%;
+        width: 100%;
+        flex: none;
+    }
+
+    .portfolio-card--split .card-body {
+        flex: 1 1 auto;
+    }
+
+    .card-body--right {
+        text-align: left;
+    }
+
+    .portfolio-shared-row {
+        flex-direction: column;
+    }
+
+    .portfolio-card--shared {
+        flex: 1 1 100%;
+        min-width: 0;
+        width: 100%;
+    }
+
+    .portfolio-card--stu,
+    .portfolio-card--lex {
+        width: 100%;
+    }
+    
+    .lex-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lex-main,
+    .lex-clips {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .lex-main {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="CSS/home.css">
+        
         <link rel="stylesheet" href="CSS/styles.css">
+        <link rel="stylesheet" href="CSS/home.css">
         <title>home</title>
 
     </head>
@@ -10,45 +11,88 @@
 
         <div class="navbar">
             <button class="hamburger" onclick="this.parentElement.classList.toggle('open')">☰</button>
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <div class="dropdown">
-                <button class="dropbtn">Portfolio
-                </button>
-                <div class="dropdown-content">
-                <a href="portfolio_CFRE.html">CFRE</a>
-                <a href="portfolio_pth.html">playingthehorn</a>
-                <a href="portfolio_other.html">Other Works</a>
-                </div>
-            </div>
-            <a href="contact_info.html">Contact Information</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="portfolio_CFRE.html">CFRE</a>
+            <a href="portfolio_pth.html">PlayingTheHorn</a>
+            <a href="portfolio_other.html">Other Works</a>
+            <a href="contact_info.html">Contact</a>
         </div>
 
-        <header>
-            <h1>Joseph Lozinski</h1>
-        </header>
-
-
         <main>
-            <h2 style="font-size: xx-large;">Biography</h2>
-            <div class="container">
-                <img src="images/bio.png" alt="photo of me interviewing at the JUNOs 2026">
-                <p style="font-size: x-large;">
-                        Good afternoon! My name is Joseph Lozinski, and I am a passionate second-year Digital Enterprise Student at the Univesity of Toronto Mississuaga. I have an innate love for digital media, which I hope to represent
-                    within my site as you explore. I love all forms of media, but more specifically love video editing. I currently work as a social media intern for the leading radio station on Campus and in mississauga, CFRE! I have
-                    done exstensive work with artists, brands, labels, and more. Feel free to navigate and discover some of my work, prior professional experience, and links to contact me or see my process in creation on a project
-                    such as this. Thank you! You can learn more about my professional career <a href="https://www.linkedin.com/in/josephlozinski/">here</a>!
-                </p>
+          <div class="home-header">
+          <div class="home-avatar">JL</div>
+          <div class="home-name">
+            <h1>Joseph Lozinski</h1>
+            <p>Digital Enterprise Management Student at UTM &bull; Social Media Management &bull; Video Production</p>
+          </div>
             </div>
 
-            <h2>Highlights </h2>
-            <p> WORK IN PROGRESS See more on my portfolio page, to view the images in larger sizes and other works!</p>
+        <div class="home-body">
+        <div class="bio-section">
 
+            <div class="section-heading">
+              <i class="ti ti-user" style="font-size:13px" aria-hidden="true"></i>
+              About
+            </div>
+        
+
+        <div class="bio-photo"><img src="images/bio.png" alt="photo of me interviewing at the JUNOs 2026"></div>
+            <p class="bio-text">
+                Good afternoon! My name is Joseph Lozinski, and I am a passionate second-year Digital Enterprise Student at the Univesity of Toronto Mississuaga. I have an innate love for digital media, which I hope to represent
+                within my site as you explore. I love all forms of media, but more specifically love video editing. I currently work as a social media intern for the leading radio station on Campus and in mississauga, CFRE! I have
+                done exstensive work with artists, brands, labels, and more. Feel free to navigate and discover some of my work, prior professional experience, and links to contact me or see my process in creation on a project
+                such as this
+            </p>
+        </div>
+
+        <div class="resume-section">
+            <div class="section-heading">
+              <i class="ti ti-briefcase" style="font-size:13px" aria-hidden="true"></i>
+              Experience
+            </div>
+            <div class="resume-row">
+              <span class="resume-year">Jan 2026&ndash;</span>
+              <div class="resume-detail">
+                <h4>CFRE Radio &mdash; Marketing Intern</h4>
+                <p>Rebuilt digital strategy, produced content for IG/TikTok/X, led volunteer team</p>
+              </div>
+            </div>
+            <div class="resume-row">
+              <span class="resume-year">Feb&ndash;Feb '26</span>
+              <div class="resume-detail">
+                <h4>LensCrafters &mdash; EyeCare Advisor</h4>
+                <p>Customer advising, optical assistance, training new recruits</p>
+              </div>
+            </div>
+            <div class="resume-row">
+              <span class="resume-year">Feb&ndash;Sep '24</span>
+              <div class="resume-detail">
+                <h4>Robothink Toronto &mdash; Instructor</h4>
+                <p>Managed summer programming, branding, client relations</p>
+              </div>
+            </div>
+            <div class="section-heading" style="margin-top: 14px;">
+              <i class="ti ti-school" style="font-size:13px" aria-hidden="true"></i>
+              Education
+            </div>
+            <div class="resume-row">
+              <span class="resume-year">2024&ndash;Now</span>
+              <div class="resume-detail">
+                <h4>University of Toronto Mississauga</h4>
+                <p>Digital Enterprise Management, Year 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+           
         </main>
 
-        <footer>
-            All work depicted, linked, and present on this page is property of Joseph Lozinski, or has been produced by him (2026). 
-        </footer>
+    <footer>
+            <span>&#9632; Contact Information</span>
+            <span>All work &copy; Joseph Lozinski 2026</span>
+    </footer>
 
     </body>
+
+    
 </html>

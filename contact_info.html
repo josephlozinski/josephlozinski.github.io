@@ -5,75 +5,89 @@
         <link rel="stylesheet" href="CSS/styles.css">
 
         <title>JL - Contact</title>
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     </head>
 
     <body> 
         <div class="navbar">
             <button class="hamburger" onclick="this.parentElement.classList.toggle('open')">☰</button>
             <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <div class="dropdown">
-                <button class="dropbtn">Portfolio
-                </button>
-                <div class="dropdown-content">
-                    <a href="portfolio_CFRE.html">CFRE</a>
-                    <a href="portfolio_pth.html">playingthehorn</a>
-                    <a href="portfolio_other.html">Other Works</a>
-                </div>
-            </div>
-            <a href="contact_info.html">Contact Information</a>
+            <a href="portfolio_CFRE.html">CFRE</a>
+            <a href="portfolio_pth.html">PlayingTheHorn</a>
+            <a href="portfolio_other.html">Other Works</a>
+            <a href="contact_info.html" class="active">Contact</a>
         </div>
 
-        <header>Contact Information</header>
-
         <main>
-            <p>
-                Considering working with me? Leave your first and last name, email and comment below and Ill be sure to get back to you. Otherwise, you can meet me at my office at 1815 Inner Cir Rd on Tuesdays from 9am-5pm.
-            </p>
-            
-            <h2>Request Form</h2>
-
-            <div class="container">
+          <div class="contact-hero">
+            <h2>Contact</h2>
+            <p>Let's work together</p>
+          </div>
+        <div class="contact-page">
+          <div class="contact-left">
+                <div class="section-heading" style="margin-bottom: 12px;">
+                    <i class="ti ti-send" style="font-size:13px" aria-hidden="true"></i>
+                    Request Form
+                </div>
                 <form id="contactForm">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="First Name">
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Last name">
-
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Email">
-
-                <label for="subject">Comment</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
-                <p id="formStatus"></p>
+                    <div class="form-group">
+                        <label class="form-label" for="fname">First Name</label>
+                        <input class="form-input" type="text" id="fname" name="fname" placeholder="First name...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lname">Last Name</label>
+                        <input class="form-input" type="text" id="lname" name="lname" placeholder="Last name...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="text" id="email" name="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="subject">Message</label>
+                        <textarea class="form-input" id="subject" name="subject" placeholder="Write something..." style="height: 100px;"></textarea>
+                    </div>
+                    <button class="form-submit" type="submit">[ Submit ]</button>
+                    <p id="formStatus"></p>
                 </form>
             </div>
-
-            <h2>Office Location</h2>
+          <div class="contact-right">
+            <div class="section-heading" style="margin-bottom: 12px;">
+              <i class="ti ti-map-pin" style="font-size:13px" aria-hidden="true"></i>
+              Find Me
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon"><i class="ti ti-building" style="font-size:13px" aria-hidden="true"></i></div>
+              <div class="contact-info-text">
+                <h5>Office</h5>
+                <p>1815 Inner Cir Rd, Tuesdays 9am&ndash;5pm</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon"><i class="ti ti-brand-linkedin" style="font-size:13px" aria-hidden="true"></i></div>
+            <div class="contact-info-text">
+                <h5>LinkedIn</h5>
+                <p><a href="https://www.linkedin.com/in/josephlozinski/" target="_blank">linkedin.com/in/josephlozinski</a></p>
+            </div>
+            </div>
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.771606459203!2d-79.6639912!3d43.548802599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4300178fd8e1%3A0xdb17c16033953bf9!2sStudent%20Centre!5e0!3m2!1sen!2sca!4v1774917031294!5m2!1sen!2sca">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.771606459203!2d-79.6639912!3d43.548802599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b4300178fd8e1%3A0xdb17c16033953bf9!2sStudent%20Centre!5e0!3m2!1sen!2sca!4v1774917031294!5m2!1sen!2sca"
+                style="width:100%; height:200px; border: 2px solid var(--jl-navy); margin-top: 12px;">
             </iframe>
-
+          </div>
+        </div>
         </main>
         
         <footer>
-            All work depicted, linked, and present on this page is property of Joseph Lozinski, or has been produced by him (2026). 
+            <span>&#9632; Contact Information</span>
+            <span>All work &copy; Joseph Lozinski 2026</span>
         </footer>
+                
 
         <script>
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const url = 'https://script.google.com/macros/s/AKfycbxHhdegTSENhbdv6HqH_2prCgdzi5ugeoqbyk9DIAjNHyOoD7s0xMmLREUBy1DSXPhMOA/exec';
-                const data = {
-                    firstname: document.getElementById('fname').value,
-                    lastname:  document.getElementById('lname').value,
-                    email:     document.getElementById('email').value,
-                    subject:   document.getElementById('subject').value,
-                };
+                
                 document.getElementById('formStatus').textContent = 'Sending...';
                 fetch(url, {
                     method: 'POST',
